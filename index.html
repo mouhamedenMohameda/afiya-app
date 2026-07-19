@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0E2A30" />
+  <title>Afiya — Système d'information hospitalier</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- ===== Sidebar (drawer on mobile, fixe on desktop) ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+      <div class="sidebar-brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M3 12h4l2-7 4 14 2-7h6" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Afiya</span>
+          <span class="brand-tag" id="brand-tag">Système hospitalier</span>
+        </div>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Fermer le menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <nav class="nav" id="nav" aria-label="Modules"></nav>
+
+      <div class="sidebar-foot">
+        <div class="user-chip">
+          <div class="user-av" id="user-av">MV</div>
+          <div class="user-meta">
+            <span class="user-name" id="user-name">Dr. Mohamed Vall</span>
+            <span class="user-role" id="user-role">Docteur</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim" hidden></div>
+
+    <!-- ===== Colonne principale ===== -->
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Ouvrir le menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="context">
+          <span class="context-service" id="context-service">Pédiatrie · Réanimation</span>
+          <span class="context-role" id="context-role">Docteur</span>
+        </div>
+
+        <div class="topbar-right">
+          <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="ar">ع</button>
+          </div>
+          <button class="icon-btn avatar-btn" id="avatar-btn" aria-label="Profil">
+            <span class="avatar" id="avatar-top">MV</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="content" id="content" tabindex="-1"></main>
+    </div>
+
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/modules/hospitalises.js"></script>
+  <script src="assets/js/modules/dashboard.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
