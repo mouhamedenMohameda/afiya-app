@@ -12,8 +12,8 @@
       title: { fr: "Clinique", ar: "السريرية" },
       items: [
         { id: "accueil",      route: "accueil",      icon: "accueil",      fr: "Accueil",           ar: "الاستقبال" },
-        { id: "urgences",     route: "urgences",     icon: "urgences",     fr: "Urgences",          ar: "الطوارئ",        badge: 3 },
-        { id: "hospitalises", route: "hospitalises", icon: "hospitalises", fr: "Hospitalisés",      ar: "المرضى المقيمون", badge: 12, quickAdd: true },
+        { id: "urgences",     route: "urgences",     icon: "urgences",     fr: "Urgences",          ar: "الطوارئ",        badge: (AFIYA.data ? AFIYA.data.emCounts().attente : 0) },
+        { id: "hospitalises", route: "hospitalises", icon: "hospitalises", fr: "Hospitalisés",      ar: "المرضى المقيمون", badge: (AFIYA.data ? AFIYA.data.counts().occ : 0), quickAdd: true },
         { id: "dossiers",     route: "dossiers",     icon: "dossiers",     fr: "Mes dossiers",      ar: "ملفاتي" },
         { id: "explorations", route: "explorations", icon: "explorations", fr: "Explorations",      ar: "الاستكشافات" },
         { id: "comptes",      route: "comptes",      icon: "comptes",      fr: "Comptes rendus",    ar: "التقارير الطبية" }
