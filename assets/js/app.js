@@ -206,6 +206,7 @@
   function init() {
     i18n.apply();
     applyAccent();
+    if (A.applyStoredPrefs) A.applyStoredPrefs();   /* thème + couleur choisis dans Paramétrages */
     applyBrand();
     renderNav();
 
